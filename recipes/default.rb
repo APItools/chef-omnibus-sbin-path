@@ -9,7 +9,10 @@
 #
 # We fully control the $PATH for the omnibus build user.
 #
+
+# build_user_home = node['omnibus']['build_user_home']
 build_user_home = node['omnibus']['build_user_home']
+build_user_home = '/home/vagrant/'
 
 file File.join(build_user_home, '.bashrc.d', 'sbin-path.sh') do
   owner   node['omnibus']['build_user']
